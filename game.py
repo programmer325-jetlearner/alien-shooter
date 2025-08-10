@@ -121,6 +121,19 @@ def restart_game():
       alien.y = random.randint(-100, 0)
       aliens.append(alien)
 
+def game_over_screen():
+    screen.clear()
+    screen.fill("#34BBFE")
+
+    screen.draw.text("GAME OVER",(WIDTH//2-200, HEIGHT//2),fontsize=60,color="#001233")
+    screen.draw.text(f"final score: {score}",(WIDTH//2-200, HEIGHT//2+50),fontsize=40,color="#001233")
+    screen.draw.text("press SPACE to restart game",(WIDTH//2-200,HEIGHT//2+100),fontsize=60,color="#38040e")
+
+    if keyboard.SPACE:
+        restart_game()
+
+
+
 
         
 
